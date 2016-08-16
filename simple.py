@@ -1,7 +1,7 @@
 def import_words():
     word_list = open('words', 'r')
     word_pools = [set() for length in range(6)]
-    print(word_pools)
+    # print(word_pools)
     for word in word_list:
         clean_word = word.lower().strip()
         if len(clean_word) < 7:
@@ -25,8 +25,8 @@ def display_composites(composites):
         print("%s + %s = %s" % combo)
     return
 
-word_sets = import_words()
-composites = find_composites(word_sets)
-display_composites(composites)
-print(len(composites))
+# word_sets = import_words()
+# composites = find_composites(word_sets)
+# display_composites(composites)
+# print(len(composites))
 
