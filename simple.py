@@ -28,5 +28,5 @@ def display_composites(composites):
 word_sets = import_words()
 composites = find_composites(word_sets)
 display_composites(composites)
-# print(word_sets[2])
+print(len(composites))
 
