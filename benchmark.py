@@ -1,21 +1,32 @@
 import time
 import fast
+import modular
 import simple
 
 fast_start = time.time()
 sets, trie = fast.import_words()
-for cycle in range(10):
-    composites = fast.find_composites(sets, trie)
-fast_end = time.time()
+print([len(group) for group in sets])
+# for cycle in range(10):
+#     composites = fast.find_composites(sets, trie)
+# fast_end = time.time()
 
 simple_start = time.time()
 sets = simple.import_words()
-for cycle in range(10):
-    composites = simple.find_composites(sets)
-simple_end = time.time()
+# for cycle in range(10):
+#     composites = simple.find_composites(sets)
+# simple_end = time.time()
 
-print(fast_end-fast_start)
-print(simple_end-simple_start)
+# print(fast_end-fast_start)
+# print(simple_end-simple_start)
+fastComp = fast.find_composites(sets, trie)
+slowComp = simple.find_composites(sets)
+module = modular.CompositeFinder()
+print(type( module))
+modComp = module.find_composites()
+print([len(slowComp), len(fastComp), len(modComp)])
+find_size_9 = modular.CompositeFinder(size=15)
+print([len(group) for group in find_size_9.word_pools])
+print(len(find_size_9.find_composites()))
 '''
 results:
 with looading in the loop,
