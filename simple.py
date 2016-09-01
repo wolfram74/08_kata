@@ -30,3 +30,4 @@ def display_composites(composites):
 # display_composites(composites)
 # print(len(composites))
 
+26+ 139+ 1294+ 4994+ 9972+ 17462
